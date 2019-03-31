@@ -1,0 +1,26 @@
+{
+  "name": "graphql-node.js-prisma.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstantin-921/GraphQl-Node.js-Prisma.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konstantin-921/GraphQl-Node.js-Prisma.io/issues"
+  },
+  "homepage": "https://github.com/konstantin-921/GraphQl-Node.js-Prisma.io#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.17.4"
+  },
+  "devDependencies": {
+    "@playlyfe/gql": "^2.6.1"
+  }
+}
