@@ -13,5 +13,6 @@ prisma deploy
 ```
 
 # Start the server & open Playground
-
+```
 npm start
+```

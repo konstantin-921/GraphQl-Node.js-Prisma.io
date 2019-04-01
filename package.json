@@ -20,7 +20,5 @@
   "dependencies": {
     "graphql-yoga": "^1.17.4"
   },
-  "devDependencies": {
-    "@playlyfe/gql": "^2.6.1"
-  }
+  "devDependencies": {}
 }
