@@ -1,5 +1,5 @@
 {
-  "name": "graphql-node.js-prisma.io",
+  "name": "hackernews-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/konstantin-921/GraphQl-Node.js-Prisma.io#readme",
   "dependencies": {
-    "graphql-yoga": "^1.17.4"
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.17.4",
+    "jsonwebtoken": "^8.5.1",
+    "prisma-client-lib": "^1.29.2"
   },
   "devDependencies": {}
 }
