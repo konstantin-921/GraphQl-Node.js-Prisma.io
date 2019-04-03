@@ -43,8 +43,52 @@ function post(parent, args, context, info) {
   })
 }
 
+async function deleteLink(parent, args, context, info) {
+  const userId = getUserId(context)
+
+  try {
+    await context.prisma.updateUser({
+      where: { id: userId },
+      data: {
+        links: {
+          delete: { id: args.id }
+        }
+      }
+    })
+  } catch(error) {
+    console.log('====================================');
+    console.log(error);
+    console.log('====================================');
+    throw new Error('This link not exist');
+  }
+
+  return {
+    id: args.id
+  }
+}
+
+async function vote(parent, args, context, info) {
+
+  const userId = getUserId(context)
+
+  const linkExists = await context.prisma.$exists.vote({
+    user: { id: userId },
+    link: { id: args.linkId },
+  })
+  if (linkExists) {
+    throw new Error(`Already voted for link: ${args.linkId}`)
+  }
+
+  return context.prisma.createVote({
+    user: { connect: { id: userId } },
+    link: { connect: { id: args.linkId } },
+  })
+}
+
 module.exports = {
   signup,
   login,
   post,
+  vote,
+  deleteLink
 }
